@@ -7,7 +7,10 @@ __author__ = 'Michael Liao'
 async web application.
 '''
 
-import logging; logging.basicConfig(level=logging.INFO)
+import logging;
+
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')  # logging.basicConfig函数对日志的输出格式及方式做相关配置
 
 import asyncio, os, json, time
 from datetime import datetime
